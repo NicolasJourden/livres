@@ -21,7 +21,6 @@ def GetGibertJeune( EAN ):
 
    return Val
 
-
 #v=GetGibertJeune("9782081395534")
 #print 'Value of 9782081395534 is '+ v +"\n"
 
