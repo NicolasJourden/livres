@@ -15,9 +15,12 @@ def GetChapitreCom( EAN ):
    Val=re.sub(r'jQuery.*\( (.*) \);', r'\1', resp.text)
 #   print ('---' + Val + '---')
    parsed_json = json.loads(Val)
+#   print parsed_json['TakeBackOffer']
 
-   return str(parsed_json['TakeBackOffer']['PrixReprise'])
-
+   if parsed_json['TakeBackOffer'] is None:
+     return "0.0"
+   else:
+     return str(parsed_json['TakeBackOffer']['PrixReprise'])
 
 #v=GetChapitreCom("9782081395534")
 #print 'Value of 9782081395534 is '+ str(v)+"\n"
