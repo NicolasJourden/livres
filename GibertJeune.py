@@ -18,7 +18,6 @@ def GetGibertJeune( EAN ):
    else:
      Val="0.0"
 
-
    return Val
 
 #v=GetGibertJeune("9782081395534")
